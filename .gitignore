@@ -1,0 +1,10 @@
+# Local secrets / lab artifacts — never commit these
+*.pem
+*.key
+*password*
+*.env
+.azure/
+
+# OS cruft
+.DS_Store
+Thumbs.db
