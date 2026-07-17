@@ -38,7 +38,9 @@ labs get done without accidentally burning the whole credit on an idle VM:
 4. **Bastion bills ~$4.50/day idle.** Deploy it, use it, delete it the same session
    (or use the Developer SKU if offered). Same discipline for VPN gateways and Site
    Recovery replication.
-5. **End-of-session ritual, every time:**
+5. **Azure Firewall (Lab 19) bills ~$1.25/day idle**, same discipline as Bastion —
+   deploy, use, delete, in that session.
+6. **End-of-session ritual, every time:**
    ```
    az group list -o table          # what still exists?
    az group delete -n rg-labXX --yes --no-wait
@@ -91,6 +93,17 @@ Every session ends with `az group delete`. Every week ends with a commit.
 | [16](labs/lab16-monitor-kql-alerts/README.md) | Azure Monitor + KQL + alerts | Monitoring |
 | [17](labs/lab17-network-watcher/README.md) | Network Watcher | Monitoring |
 | [18](labs/lab18-backup-siterecovery/README.md) | Backup and Site Recovery | Monitoring |
+
+## Extensions beyond the core 18
+
+The 18 labs above are the original curriculum, unchanged. These two were added
+afterward for a specific reason each — not part of "the 18-lab curriculum" claim
+above, called out separately so that claim stays accurate:
+
+| Lab | Why it's here |
+|---|---|
+| [19 — Azure Firewall](labs/lab19-azure-firewall/README.md) | Closes a real gap: Azure Firewall is a genuine AZ-104 objective (4.2.4) that never got a dedicated hands-on lab in the original 18 |
+| [Bonus — Azure Lighthouse (MSP Multi-Customer)](labs/bonus-lighthouse-msp/README.md) | **Not** an AZ-104 exam objective — added because a real job posting required "prior experience handling multiple customers at an IT consultancy or MSP," and Lighthouse is the direct Azure-native answer to that |
 
 ## Gotchas that will cost you an evening
 
