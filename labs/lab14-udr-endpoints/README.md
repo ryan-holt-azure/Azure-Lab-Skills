@@ -36,6 +36,17 @@ Private-endpoint DNS fluency — knowing exactly why a private endpoint "isn't
 working" almost always traces back to a missing or unlinked `privatelink.*`
 zone — is what separates senior admins from associates.
 
+## Job posting relevance
+
+The "public S3 bucket" category of breach has a direct Azure equivalent: a
+storage account left reachable from the public internet when it should only
+be reachable from inside the network. Private endpoints are the fix, and the
+lab's whole point — broken DNS being the #1 real-world failure — is itself
+the "boring misconfiguration, not a hack" lesson: nobody breaches this,
+someone just forgets to link a DNS zone and the business loses connectivity to
+its own data. Directly relevant to the HIPAA/Sophos posting's "network
+security" and "vulnerability remediation" lines.
+
 ## Cleanup
 
 ```bash

@@ -97,6 +97,16 @@ have prevented the westus2 deploy without removing your own access. Tags-by-poli
 is FinOps plumbing: it's how a cost center actually stays attributable at scale
 instead of becoming an unowned line item on the bill.
 
+## Job posting relevance
+
+Policy-enforced governance is the direct answer to the HIPAA/Sophos posting's
+"organizational security standards" and "security hardening" lines — a
+Deny policy is a technical control that prevents non-compliant infrastructure
+from ever existing, not just documentation saying it shouldn't. Resource locks
+answer a different real fear at both posting types: an MSP or IT team managing
+someone else's production environment needs a guardrail against the accidental
+`az group delete` that ends a career.
+
 ## Cleanup
 
 Remove the lock → delete both policy assignments (Policy → Assignments → … →

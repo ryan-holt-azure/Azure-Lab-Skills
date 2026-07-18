@@ -41,6 +41,16 @@ Recovery
 sentence that actually matters — the same standard applied to any backup
 system in a real job, not just Azure VMs.
 
+## Job posting relevance
+
+"Backups depend on someone remembering — until data is just gone" is the
+whole business problem, and "restore verified on \<date\>" is the only real
+proof it isn't happening here. Site Recovery goes further: it's the answer to
+"what happens if a whole site goes down," which is a direct, existential
+version of the HIPAA/Sophos posting's infrastructure-resilience concerns —
+downtime for a healthcare-adjacent org isn't just lost revenue, it can mean
+patient care disruption.
+
 ## Cleanup
 
 ```bash

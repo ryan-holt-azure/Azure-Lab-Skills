@@ -59,6 +59,17 @@ to make on day one of any real subscription inherited at a new job: open Advisor
 read Security and Cost, bring three findings to the first team meeting. Costs
 twenty minutes, looks like a wizard in week one.
 
+## Job posting relevance
+
+This is the exact real-world problem behind "owners can't read, predict, or
+explain their cloud bill" — the same failure mode that turns a $5K estimate
+into $30K. Budgets + Cost Analysis + Advisor is the actual toolset for that
+problem, not a toy version of it. For an MSP managing multiple customer
+subscriptions, this is even sharper: without per-subscription budgets and
+alerting, cost overruns on one customer's environment go unnoticed until the
+invoice, which is a trust-destroying conversation to have after the fact
+instead of before it.
+
 ## Cleanup
 
 Keep `ag-email-ryan` and the budget running for the rest of the 30-day window —

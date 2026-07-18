@@ -113,6 +113,15 @@ password. Nobody clicked "add member." That chain **is** onboarding automation a
 a real org — a strong interview story, and directly relevant to any healthcare or
 enterprise IT role.
 
+## Job posting relevance
+
+The MSP-generalist posting names **Active Directory** as a preferred skill — this
+lab is the cloud-native version of that (Entra ID, not on-prem AD/GPO; see Lab
+02's caveat). More specifically, group-based licensing at scale is exactly the
+"onboarding 30 people, not 1" problem an MSP handling multiple customer
+organizations runs into constantly — the same "handling multiple customers"
+requirement that motivated the [Lighthouse bonus lab](../bonus-lighthouse-msp/README.md).
+
 ## Cleanup
 
 Delete the test users, both groups, and the guest invite. Identity objects don't

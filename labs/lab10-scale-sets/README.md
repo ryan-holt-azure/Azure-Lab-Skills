@@ -32,6 +32,15 @@ oscillation) — is a favorite real-world gotcha that only shows up if a full
 cycle is actually watched, not just configured. That's the difference between
 "I set up autoscale" and "I understand autoscale."
 
+## Job posting relevance
+
+Honest note: neither researched posting names autoscaling directly — both are
+infrastructure/security generalist roles, not high-scale application hosting.
+This lab still matters for general cloud engineering credibility and for the
+"infrastructure modernization" language both postings use, but it's not a
+line-item match the way Labs 04, 06, or 13 are. Don't force this one in an
+interview if it doesn't come up naturally.
+
 ## Cleanup
 
 ```bash

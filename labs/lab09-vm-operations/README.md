@@ -40,6 +40,17 @@ Deallocate when done, every time — this is the single habit the whole 30-day
 credit budget depends on. Saying that explicitly in an interview is a small but
 real signal of operational discipline.
 
+## Job posting relevance
+
+VM lifecycle management is the cloud analog of the MSP posting's Windows
+Server / Hyper-V experience — the exact hypervisor changes, but resizing,
+disk management, and availability planning are the same operational
+questions. Encryption at host maps directly to the HIPAA/Sophos posting's
+compliance requirements: data-at-rest protection for anything that could
+touch PHI isn't optional, and knowing which of the three encryption options
+actually applies to a given question is the difference between sounding
+compliant and being compliant.
+
 ## Cleanup
 
 ```bash

@@ -44,6 +44,15 @@ This is the on-ramp to declarative infrastructure generally — same
 export → decompile → parameterize → what-if → deploy mindset carries directly
 into Terraform or any other IaC tool later; only the syntax changes.
 
+## Job posting relevance
+
+The HIPAA/Sophos posting's "Project Participation & Collaboration" section
+names infrastructure modernization, migrations, deployments, and integration
+projects explicitly — repeatable, template-driven deployment is what makes
+those projects consistent across sites instead of each one being a fresh
+one-off. `what-if` in particular answers a real operational fear directly:
+"what does this change actually do before I run it against something live."
+
 ## Cleanup
 
 ```bash

@@ -42,6 +42,15 @@ remembering the feeling of watching a zero-downtime swap happen, because it's
 the argument for the practice in any future job that still does manual
 cutover deploys.
 
+## Job posting relevance
+
+Honest note: like Lab 10, this isn't a direct line-item in either researched
+infrastructure/security posting — App Service and containers are application
+hosting, not network/endpoint administration. Its real value is as the
+hosting foundation for later, application-focused portfolio work (the
+Cloud Engineer repo's customer-facing tools), not as interview ammunition
+for these two specific roles.
+
 ## Cleanup
 
 ```bash

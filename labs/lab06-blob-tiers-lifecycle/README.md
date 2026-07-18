@@ -39,6 +39,16 @@ point #1 in almost any cloud interview. Being able to describe the difference
 between versioning, snapshots, and soft delete precisely (not "they're all kind
 of backups") signals real hands-on time, not just reading the docs page.
 
+## Job posting relevance
+
+This is the storage half of "backups depend on someone remembering — until
+data is just gone." Versioning and soft delete are what make a backup
+strategy survive human error (an accidental overwrite or delete), and
+lifecycle rules are what make it survive *budget* neglect — data ages out to
+cheaper tiers automatically instead of an engineer having to remember to move
+it. Real infrastructure roles get judged on whether backups were actually
+restorable, not whether a backup job "ran."
+
 ## Cleanup
 
 ```bash

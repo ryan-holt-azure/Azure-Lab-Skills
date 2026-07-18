@@ -81,6 +81,15 @@ asks "why does this person have access to that?" — knowing it exists, and havi
 broken/fixed the NotActions trap yourself, is a stronger answer than reciting the
 rule.
 
+## Job posting relevance
+
+Both researched postings care about controlled, least-privilege access — the
+HIPAA/Sophos posting explicitly ties "security hardening" and organizational
+security standards to access control, and the MSP posting's Active Directory
+line implies real permission management, not just account creation. "Check
+access" (2.4) is the concrete answer to "how do you audit who can touch what,"
+a question that comes up directly in any HIPAA-adjacent interview.
+
 ## Cleanup
 
 ```bash

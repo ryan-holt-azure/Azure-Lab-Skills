@@ -48,6 +48,15 @@ and there's no way to scope or expire it granularly. A policy-bound SAS is the
 professional pattern: same least-privilege instinct as a firewall allow-list, and
 it's revocable without rotating the key for everyone else.
 
+## Job posting relevance
+
+Both postings name vulnerability remediation and security hardening as ongoing
+duties, not one-time setup. The storage firewall exercise is that in
+miniature: a resource that was open, deliberately restricted, and verified
+broken-then-fixed — the actual muscle memory for "lock this down without
+breaking the people who legitimately need it," which is the daily tension in
+any HIPAA-adjacent or MSP environment.
+
 ## Cleanup
 
 ```bash

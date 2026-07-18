@@ -84,6 +84,15 @@ environments from one control point, instead of maintaining inconsistent NSG
 rules per customer VNet — the same "allow only what's needed" instinct from NSGs,
 applied at organizational scale.
 
+## Job posting relevance
+
+Directly named in the HIPAA/Sophos posting: "Administer and maintain firewall
+and security appliance environments." The deny-by-default behavior when no
+rule matches is the technical enforcement of least privilege at the network
+layer — the same "open port" boring-misconfiguration risk from Labs 13/14,
+closed by a centralized, logged control point instead of per-VM NSG rules
+that are easy to forget or get inconsistent across a growing environment.
+
 ## Cleanup
 
 ```bash

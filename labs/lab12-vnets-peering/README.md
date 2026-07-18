@@ -34,6 +34,16 @@ This lab *is* the hub-spoke design argument, built and observed firsthand
 instead of just described — a live example of why real networks need a hub
 (or a full mesh) rather than assuming peering chains transitively.
 
+## Job posting relevance
+
+This is the cloud version of the HIPAA/Sophos posting's "WAN connectivity
+between organizational locations" and "network expansion, infrastructure
+upgrades, and site deployments" lines almost word for word — multiple sites,
+non-overlapping address spaces, and the hub-spoke design pattern are exactly
+how a multi-location organization (or an MSP serving several client sites)
+actually gets built. The B↔C non-transitivity failure is precisely the kind
+of subtle networking bug a real site expansion project runs into.
+
 ## Cleanup
 
 ```bash

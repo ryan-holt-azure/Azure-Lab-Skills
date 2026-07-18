@@ -5,13 +5,22 @@ mapped to the official Microsoft skills outline. Exam target: August 2026.
 
 This repo is proof of work, not just study notes. Each lab folder has:
 
-- **README.md** — the runbook: what to build, why, the exact exam facts it tests, and
-  the interview-ready "pro" talking point.
+- **README.md** — the runbook: what to build, why, the exact exam facts it tests, a
+  **"Job posting relevance"** section tying the skill to real requirements from
+  actual postings researched during this job search, and the interview-ready
+  "pro" talking point.
 - **RESULTS.md** — a fill-in-the-blank log filled out *after* actually running the lab
   in Azure: commands run, output, screenshots, gotchas hit, cost check.
 
 Commit after every lab. The log entries are the portfolio — they show real hands-on
 work, not just that a study guide was read.
+
+**On the "Job posting relevance" sections:** the goal in every one is the
+business consequence, not the feature description — an exposed RDP port isn't
+just "a misconfigured NSG," it's how ransomware crews find production systems;
+a missing backup isn't "a skipped step," it's data that's just gone. Two
+sections are honest that they *don't* map cleanly to either researched posting
+(Labs 10 and 11) rather than forcing a connection that isn't really there.
 
 ## Domains (weighted by exam %)
 

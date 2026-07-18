@@ -37,6 +37,16 @@ real time — is exactly how real outages self-heal, or don't, when someone
 forgot to open the probe port in the NSG. Having watched it happen beats
 describing it from memory.
 
+## Job posting relevance
+
+This is "website goes down → lost revenue, trust, customers" solved at the
+infrastructure layer instead of caught after the fact by a customer
+complaint — the health probe pulling a dead instance out of rotation *is* the
+uptime protection, happening automatically instead of depending on someone
+noticing. Same theme as the HIPAA/Sophos posting's "escalated infrastructure
+and connectivity issues" and "root cause analysis" — the probe-pull moment is
+literally the first line of that root-cause story.
+
 ## Cleanup
 
 ```bash

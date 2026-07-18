@@ -37,6 +37,15 @@ AzCopy sync is the migration workhorse — it's the tool reached for the first
 time a clinic (or any) file server moves to the cloud, because it only moves
 what changed instead of re-copying everything.
 
+## Job posting relevance
+
+The MSP posting's "common business OS/apps" and "networking" lines both touch
+this directly — Azure Files replacing an on-prem file server is one of the
+single most common cloud-migration projects an MSP or infrastructure team
+runs, and it's exactly the kind of "infrastructure modernization" and
+"migrations" work named in the HIPAA/Sophos posting's Project Participation
+section.
+
 ## Cleanup
 
 ```bash

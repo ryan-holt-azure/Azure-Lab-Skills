@@ -41,6 +41,17 @@ KQL is T-SQL's cousin — that's the fastest way to get productive in it fast.
 Being the person on a team who can actually write the query instead of
 clicking through a dashboard is a real differentiator.
 
+## Job posting relevance
+
+"No logging" is one of the most common boring misconfigurations behind a real
+breach going undetected for months — this lab is the direct fix, and it's the
+literal skill in the HIPAA/Sophos posting's "Monitor security alerts, logs,
+and network events for suspicious activity" line. It's also the automated
+version of "the site goes down and the owner finds out from a customer
+complaint" — an alert firing in seconds beats a phone call. The "Monitoring,
+Troubleshooting & Support" section of that posting is essentially this lab,
+performed on a schedule for a living.
+
 ## Cleanup
 
 ```bash

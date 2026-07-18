@@ -36,6 +36,16 @@ Public RDP/SSH is never the right answer in production — Bastion or a VPN,
 always. **Effective security rules** is the "why is this blocked" debugger
 reached for constantly once NSGs start stacking at subnet and NIC level.
 
+## Job posting relevance
+
+Business consequence, not just feature: an exposed RDP/SSH port is exactly
+"database exposed" from the risk-framework — it's how ransomware crews find
+production VMs in the first place, and it's the single most common
+finding in a real security audit. This is the HIPAA/Sophos posting's
+"Security Appliance & Cybersecurity Management" section directly — "implement
+and maintain cybersecurity best practices" isn't abstract, it's "no public
+RDP, ever," proven hands-on here instead of just stated as a rule.
+
 ## Cleanup
 
 ```bash

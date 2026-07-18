@@ -84,6 +84,15 @@ proves hands-on fluency with the *mechanism*, which is genuinely useful and
 honest, but it isn't a substitute for real client experience if an interviewer
 asks directly. Frame it as what it is.
 
+## Job posting relevance
+
+Already the point of this whole lab, but stated plainly: the alternative to
+Lighthouse is shared credentials or standing guest accounts across customer
+tenants — exactly the "over-broad admin" and "old access keys" categories of
+boring misconfiguration that cause real breaches. This lab is the MSP
+posting's headline requirement solved the way a real consultancy actually
+solves it, not worked around with a shared password spreadsheet.
+
 ## Cleanup
 
 - Remove the Lighthouse delegation from the customer tenant.

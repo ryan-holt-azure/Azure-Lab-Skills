@@ -36,6 +36,16 @@ X" tickets without ever touching a console cable — knowing these tools by name
 and use case is a fast way to sound like the first responder on a networking
 incident, not someone guessing.
 
+## Job posting relevance
+
+This is the HIPAA/Sophos posting's "Utilize monitoring tools to proactively
+identify and resolve infrastructure concerns" and "Perform root cause analysis
+and document corrective actions" lines, verbatim. The business consequence of
+*not* having these tools: a "can't reach X" ticket turns into hours of guessing
+instead of a two-minute IP Flow Verify check — directly the "deployments/fixes
+take too long, the whole business slows down" pattern from the business-problem
+framework, applied to troubleshooting instead of shipping.
+
 ## Cleanup
 
 No dedicated resource group — this lab only reads state from Labs 12–14's
