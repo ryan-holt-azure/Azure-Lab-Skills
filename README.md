@@ -3,6 +3,12 @@
 Hands-on Azure Administrator (AZ-104) lab work, built against an 18-lab curriculum
 mapped to the official Microsoft skills outline. Exam target: August 2026.
 
+The 20 labs each teach one skill in isolation — that's necessary, but it's not
+how the job actually works. The [Scenarios](#scenarios) below are the other
+half: real business problems that require pulling multiple lab skills together
+under pressure, opening with what a person would actually report, not the
+technical cause.
+
 This repo is proof of work, not just study notes. Each lab folder has:
 
 - **README.md** — the runbook: what to build, why, the exact exam facts it tests, a
@@ -113,6 +119,27 @@ above, called out separately so that claim stays accurate:
 |---|---|
 | [19 — Azure Firewall](labs/lab19-azure-firewall/README.md) | Closes a real gap: Azure Firewall is a genuine AZ-104 objective (4.2.4) that never got a dedicated hands-on lab in the original 18 |
 | [Bonus — Azure Lighthouse (MSP Multi-Customer)](labs/bonus-lighthouse-msp/README.md) | **Not** an AZ-104 exam objective — added because a real job posting required "prior experience handling multiple customers at an IT consultancy or MSP," and Lighthouse is the direct Azure-native answer to that |
+
+## Scenarios
+
+A lab teaches one skill. A real job hands you a symptom and expects you to
+figure out which skills apply, in what order, under time pressure — that's
+what these simulate. Each one opens with what a non-technical person would
+actually say, not the technical root cause, and ends with the preventive fix,
+not just the immediate patch.
+
+| # | Scenario | Skills orchestrated |
+|---|---|---|
+| [1](scenarios/scenario-01-site-down-during-sale/README.md) | The site goes down during a sale | Load Balancer (15), NSG/Effective rules (13), Network Watcher (17), Monitor (16) |
+| [2](scenarios/scenario-02-compliance-audit-finding/README.md) | The compliance audit finding | Storage firewall (05), NSG/Bastion (13), Monitor/Logs (16), Policy (03) |
+| [3](scenarios/scenario-03-new-site-and-mass-onboarding/README.md) | New location opening, 30 hires starting Monday | Users/Groups/SSPR (01), VNets/Peering (12), DNS (15) |
+| [4](scenarios/scenario-04-surprise-cloud-bill/README.md) | The surprise cloud bill | Cost/Budgets/Advisor (04), Tags/Policy (03) |
+| [5](scenarios/scenario-05-data-loss-failed-restore/README.md) | Data loss and the question nobody wants to ask | Backup/Site Recovery (18), Resource locks (03), Blob versioning (06) |
+
+Each scenario README follows the same shape: business context → what actually
+gets reported → business consequence if unresolved → investigation →
+root cause → resolution → prevention/hardening → skills drawn from → an
+interview-ready problem/action/result framing.
 
 ## Gotchas that will cost you an evening
 
