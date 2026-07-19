@@ -118,6 +118,8 @@ above, called out separately so that claim stays accurate:
 | Lab | Why it's here |
 |---|---|
 | [19 — Azure Firewall](labs/lab19-azure-firewall/README.md) | Closes a real gap: Azure Firewall is a genuine AZ-104 objective (4.2.4) that never got a dedicated hands-on lab in the original 18 |
+| [20 — Key Vault + Managed Identity](labs/lab20-keyvault-managed-identity/README.md) | Surfaced by outside AZ-104 study research — no lab anywhere covers how an app authenticates to Azure without a hardcoded credential, a real and common gap |
+| [21 — Application Insights](labs/lab21-application-insights/README.md) | Confirmed AZ-104 objective (5.1.5 in the official study guide) with no dedicated build — application-layer monitoring, distinct from Lab 16's infrastructure-layer monitoring |
 | [Bonus — Azure Lighthouse (MSP Multi-Customer)](labs/bonus-lighthouse-msp/README.md) | **Not** an AZ-104 exam objective — added because a real job posting required "prior experience handling multiple customers at an IT consultancy or MSP," and Lighthouse is the direct Azure-native answer to that |
 
 ## Scenarios
@@ -151,6 +153,25 @@ interview-ready problem/action/result framing.
   Access management for Azure resources → Yes). Turn it back off when done.
 - Can't delete a resource group → there's a lock on it.
 - Cleanup command fails silently → run `az group list -o table` and look for survivors.
+
+## Exam day intelligence
+
+Sourced from outside AZ-104 study research (a candidate's real pass writeup),
+not from Microsoft directly — treat as tactical intel, not official guidance:
+
+- **Format**: ~50 questions in 100 minutes — roughly 40 standard questions
+  plus 2 case-study sets of 3–4 questions each. Scenario-based questions
+  dominate; pure theory recall is the minority.
+- **`learn.microsoft.com` is accessible during the real exam.** That changes
+  the prep strategy: the goal isn't memorizing every flag and default value,
+  it's knowing *what to search for* and finding the answer in under two
+  minutes. Practice looking things up fast, not just knowing them cold.
+- **One real candidate's progression**: failed at 622/1000, failed again at
+  672/1000, passed at 800/1000 — the shift that mattered wasn't more
+  memorization, it was switching to scenario-based practice tests and
+  building genuine speed at documentation lookup. Worth remembering if a
+  first attempt doesn't land — the fix is usually technique, not raw study
+  hours.
 
 ## Setup (once)
 
