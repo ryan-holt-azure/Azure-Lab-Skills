@@ -1,10 +1,19 @@
-# Local secrets / lab artifacts — never commit these
+# Secrets and local-only files
+*.local.csv
+*.local.*
+credentials*.csv
+identity/out/
+*.pfx
 *.pem
 *.key
-*password*
-*.env
-.azure/
+.env
+*.publishsettings
 
-# OS cruft
-.DS_Store
+# OS / editor
 Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+
+# Unredacted screenshots dropped in the repo root
+/image*.png
