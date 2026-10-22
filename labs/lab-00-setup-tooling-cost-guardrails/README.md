@@ -40,7 +40,3 @@ _Symptom, hypothesis, evidence, fix._
 
 - First-try score: __ / 5
 - Misses and what I learned:
-
-## Interview talking point
-
-_One or two sentences I could say out loud in an interview._
