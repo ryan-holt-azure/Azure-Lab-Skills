@@ -1,19 +1,26 @@
-# Secrets and local-only files
-*.local.csv
-*.local.*
-credentials*.csv
+# Secrets and generated credentials — never commit
 identity/out/
-*.pfx
-*.pem
-*.key
+*.local.csv
+*.local.json
+*.local.bicepparam
 .env
-*.publishsettings
+.capstone-state
+
+# Build outputs
+*.zip
+iac/**/*.json.bak
+iac/bicep/**/*.json
+!iac/arm/*.json
 
 # OS / editor
-Thumbs.db
-desktop.ini
 .DS_Store
+Thumbs.db
 .vscode/
+
+# Never commit these
+*.pfx
+*.pem
+credentials*.csv
 
 # Unredacted screenshots dropped in the repo root
 /image*.png

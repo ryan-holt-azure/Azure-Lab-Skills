@@ -1,0 +1,21 @@
+{
+  "Name": "HLG Network Builder (interpretation exercise)",
+  "IsCustom": true,
+  "Description": "LAB 04, Task 6 — read this definition and answer the questions in the lab. Do not create it.",
+  "Actions": [
+    "Microsoft.Network/*",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Resources/deployments/*",
+    "Microsoft.Insights/alertRules/*"
+  ],
+  "NotActions": [
+    "Microsoft.Network/virtualNetworkGateways/*",
+    "Microsoft.Network/publicIPAddresses/write",
+    "Microsoft.Network/publicIPAddresses/delete"
+  ],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    "/subscriptions/<SUBSCRIPTION-ID>"
+  ]
+}

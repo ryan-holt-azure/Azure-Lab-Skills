@@ -1,0 +1,81 @@
+// =============================================================================
+// HLG KQL query pack — Lab 14 (Monitor and maintain Azure resources)
+// Paste one query at a time into Log Analytics (law-hlg-eus) > Logs.
+// Table availability depends on what you connected in Lab 14 Tasks 2-3.
+// =============================================================================
+
+// 1) Which VMs are reporting? (Azure Monitor Agent heartbeat)
+Heartbeat
+| summarize LastSeen = max(TimeGenerated) by Computer, OSType, ResourceGroup
+| extend MinutesSilent = datetime_diff('minute', now(), LastSeen)
+| order by MinutesSilent desc
+
+// 2) VMs silent for more than 10 minutes (basis for a log search alert)
+Heartbeat
+| summarize LastSeen = max(TimeGenerated) by Computer
+| where LastSeen < ago(10m)
+
+// 3) CPU trend per VM, 5-minute buckets (VM insights writes InsightsMetrics)
+InsightsMetrics
+| where TimeGenerated > ago(4h)
+| where Namespace == "Processor" and Name == "UtilizationPercentage"
+| summarize AvgCpu = avg(Val) by bin(TimeGenerated, 5m), Computer
+| render timechart
+
+// 4) Same idea from the Perf table (DCR-collected performance counters)
+Perf
+| where TimeGenerated > ago(4h)
+| where ObjectName == "Processor" and CounterName == "% Processor Time"
+| summarize AvgCpu = avg(CounterValue) by bin(TimeGenerated, 5m), Computer
+| render timechart
+
+// 5) Who deleted what? (Activity log routed to the workspace)
+AzureActivity
+| where TimeGenerated > ago(7d)
+| where OperationNameValue endswith "/DELETE" and ActivityStatusValue == "Success"
+| project TimeGenerated, Caller, ResourceGroup, Resource = _ResourceId, OperationNameValue
+| order by TimeGenerated desc
+
+// 6) Policy denials — the "RequestDisallowedByPolicy" errors from Lab 02 and Lab 15
+AzureActivity
+| where TimeGenerated > ago(7d)
+| where ActivityStatusValue == "Failure"
+| where Properties has "RequestDisallowedByPolicy"
+| project TimeGenerated, Caller, ResourceGroup, OperationNameValue
+
+// 7) Role assignment changes (who granted access to whom)
+AzureActivity
+| where TimeGenerated > ago(30d)
+| where OperationNameValue has "MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS"
+| project TimeGenerated, Caller, OperationNameValue, ActivityStatusValue, ResourceGroup
+
+// 8) Storage: failed blob requests by status and auth type (resource-specific table)
+StorageBlobLogs
+| where TimeGenerated > ago(24h)
+| where StatusCode >= 400
+| summarize Failures = count() by StatusCode, StatusText, AuthenticationType, OperationName
+| order by Failures desc
+
+// 9) Storage: who is reading the manifests container?
+StorageBlobLogs
+| where TimeGenerated > ago(24h)
+| where OperationName == "GetBlob" and Uri has "/manifests/"
+| summarize Reads = count() by CallerIpAddress, AuthenticationType, RequesterUpn
+
+// 10) Syslog errors from the Linux fleet
+Syslog
+| where TimeGenerated > ago(24h)
+| where SeverityLevel in ("err", "crit", "alert", "emerg")
+| summarize Count = count() by Computer, Facility, SeverityLevel
+
+// 11) Backup jobs (vault diagnostic settings -> resource-specific tables, Lab 15)
+AddonAzureBackupJobs
+| where TimeGenerated > ago(7d)
+| summarize arg_max(TimeGenerated, *) by JobUniqueId
+| project TimeGenerated, BackupItemUniqueId, JobOperation, JobStatus, JobFailureCode
+
+// 12) Connection monitor results (Network Watcher, Lab 14 Task 7)
+NWConnectionMonitorTestResult
+| where TimeGenerated > ago(1h)
+| summarize arg_max(TimeGenerated, *) by TestGroupName, SourceName, DestinationName
+| project TimeGenerated, TestGroupName, SourceName, DestinationName, TestResult

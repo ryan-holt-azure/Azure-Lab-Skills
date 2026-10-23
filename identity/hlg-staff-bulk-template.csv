@@ -1,0 +1,10 @@
+version:v1.0
+Name [displayName] Required,User name [userPrincipalName] Required,Initial password [passwordProfile] Required,Block sign in (Yes/No) [accountEnabled] Required,First name [givenName],Last name [surname],Job title [jobTitle],Department [department],Usage location [usageLocation],Street address [streetAddress],State or province [state],Country or region [country],Office [physicalDeliveryOfficeName],City [city],ZIP or postal code [postalCode],Office phone [telephoneNumber],Mobile phone [mobile]
+Tom Brennan,tom.brennan@__TENANT__.onmicrosoft.com,__PASSWORD__,No,Tom,Brennan,Service Desk Lead,IT Infrastructure,US,,Illinois,United States,Chicago HQ,Chicago,,,
+Dana Kowalski,dana.kowalski@__TENANT__.onmicrosoft.com,__PASSWORD__,No,Dana,Kowalski,Finance Manager,Finance,US,,Illinois,United States,Chicago HQ,Chicago,,,
+Grace Okafor,grace.okafor@__TENANT__.onmicrosoft.com,__PASSWORD__,No,Grace,Okafor,Compliance Auditor,Risk and Compliance,US,,Illinois,United States,Chicago HQ,Chicago,,,
+Jonas Becker,jonas.becker@__TENANT__.onmicrosoft.com,__PASSWORD__,No,Jonas,Becker,Operations Manager,EU Operations,NL,,,Netherlands,Amsterdam Hub,Amsterdam,,,
+Lotte de Vries,lotte.devries@__TENANT__.onmicrosoft.com,__PASSWORD__,No,Lotte,de Vries,Application Developer,EU Operations,NL,,,Netherlands,Amsterdam Hub,Amsterdam,,,
+Elena Rossi,elena.rossi@__TENANT__.onmicrosoft.com,__PASSWORD__,No,Elena,Rossi,Data Analyst,EU Operations,NL,,,Netherlands,Amsterdam Hub,Amsterdam,,,
+Wei Ling Tan,weiling.tan@__TENANT__.onmicrosoft.com,__PASSWORD__,No,Wei Ling,Tan,Operations Analyst,APAC Operations,SG,,,Singapore,Singapore Hub,Singapore,,,
+Arjun Mehta,arjun.mehta@__TENANT__.onmicrosoft.com,__PASSWORD__,No,Arjun,Mehta,Systems Engineer,APAC Operations,SG,,,Singapore,Singapore Hub,Singapore,,,

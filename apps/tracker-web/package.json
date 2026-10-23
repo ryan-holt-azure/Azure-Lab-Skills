@@ -1,0 +1,13 @@
+{
+  "name": "hlg-tracker-web",
+  "version": "1.0.0",
+  "description": "Halsted Logistics lab app for AZ-104 Lab 13 (App Service)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

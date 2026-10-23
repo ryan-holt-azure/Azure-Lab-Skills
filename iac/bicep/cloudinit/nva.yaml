@@ -1,0 +1,9 @@
+#cloud-config
+# HLG hub NVA: turn on Linux IP forwarding so the VM can route spoke-to-spoke
+# traffic. Azure-side forwarding is enabled on the NIC (enableIPForwarding).
+write_files:
+  - path: /etc/sysctl.d/99-hlg-ip-forward.conf
+    content: |
+      net.ipv4.ip_forward = 1
+runcmd:
+  - sysctl --system

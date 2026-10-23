@@ -1,0 +1,56 @@
+{
+  "properties": {
+    "displayName": "HLG - Resource groups must use an approved Environment tag value",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "If a resource group HAS an Environment tag, its value must be one of the approved values. Resource groups without the tag are not affected (use 'exists' to scope a rule). LAB 02 interpretation exercise.",
+    "metadata": {
+      "category": "Tags",
+      "version": "1.0.0"
+    },
+    "parameters": {
+      "allowedEnvironments": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "Allowed Environment values",
+          "description": "Approved values for the Environment tag."
+        },
+        "defaultValue": [
+          "lab",
+          "dev",
+          "prod"
+        ]
+      },
+      "effect": {
+        "type": "String",
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Deny"
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+          },
+          {
+            "field": "tags['Environment']",
+            "exists": "true"
+          },
+          {
+            "field": "tags['Environment']",
+            "notIn": "[parameters('allowedEnvironments')]"
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]"
+      }
+    }
+  }
+}

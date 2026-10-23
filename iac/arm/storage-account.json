@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "description": "HLG shared data storage account (rg-hlg-data-eus). LAB 03 STARTER: you will modify this template — see labs/03-iac-bicep-arm.md, Task 5."
+  },
+  "parameters": {
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": { "description": "Region for the storage account." }
+    },
+    "skuName": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "metadata": { "description": "Storage redundancy SKU." }
+    },
+    "costCenter": {
+      "type": "string",
+      "defaultValue": "CC-1001"
+    }
+  },
+  "variables": {
+    "storageAccountName": "[concat('sthlgdata', uniqueString(resourceGroup().id))]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2023-05-01",
+      "name": "[variables('storageAccountName')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "[parameters('skuName')]"
+      },
+      "kind": "StorageV2",
+      "tags": {
+        "Project": "az104-hybrid",
+        "CostCenter": "[parameters('costCenter')]"
+      },
+      "properties": {
+        "accessTier": "Hot"
+      }
+    }
+  ],
+  "outputs": {
+    "storageAccountName": {
+      "type": "string",
+      "value": "[variables('storageAccountName')]"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+#cloud-config
+# HLG lab web page. Uses Python's built-in http.server, so it needs no
+# internet access to install packages. Shows hostname + site on port 80.
+write_files:
+  - path: /opt/hlg/render.sh
+    permissions: '0755'
+    content: |
+      #!/bin/bash
+      mkdir -p /opt/hlg/www
+      IP=$(hostname -I | awk '{print $1}')
+      cat > /opt/hlg/www/index.html <<HTML
+      <html><body style="font-family:sans-serif">
+      <h1>Halsted Logistics</h1>
+      <p><b>Host:</b> $(hostname)</p>
+      <p><b>Private IP:</b> ${IP}</p>
+      <p><b>Site:</b> __SITE__</p>
+      </body></html>
+      HTML
+      echo "ok $(hostname)" > /opt/hlg/www/health
+  - path: /etc/systemd/system/hlg-web.service
+    content: |
+      [Unit]
+      Description=HLG lab web page
+      After=network-online.target
+      Wants=network-online.target
+
+      [Service]
+      ExecStartPre=/opt/hlg/render.sh
+      ExecStart=/usr/bin/python3 -m http.server 80 --directory /opt/hlg/www
+      Restart=always
+
+      [Install]
+      WantedBy=multi-user.target
+runcmd:
+  - systemctl daemon-reload
+  - systemctl enable --now hlg-web.service

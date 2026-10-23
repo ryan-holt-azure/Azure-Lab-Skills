@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "description": "LAB 03 — Complete-mode demo. Deploys ONE free NSG. Run what-if with --mode Complete against rg-hlg-sandbox to see what Complete mode would delete."
+  },
+  "parameters": {
+    "location": { "type": "string", "defaultValue": "[resourceGroup().location]" }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "apiVersion": "2024-05-01",
+      "name": "nsg-hlg-sandbox-keep",
+      "location": "[parameters('location')]",
+      "tags": { "Project": "az104-hybrid", "CostCenter": "CC-1001" },
+      "properties": { "securityRules": [] }
+    }
+  ]
+}

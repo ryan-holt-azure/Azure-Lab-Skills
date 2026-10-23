@@ -1,0 +1,11 @@
+Alias,GivenName,Surname,JobTitle,Department,UsageLocation,City,Country,OfficeLocation,ManagerAlias
+priya.natarajan,Priya,Natarajan,Cloud Administrator,IT Infrastructure,US,Chicago,United States,Chicago HQ,
+marcus.reyes,Marcus,Reyes,Network Engineer,IT Infrastructure,US,Chicago,United States,Chicago HQ,priya.natarajan
+tom.brennan,Tom,Brennan,Service Desk Lead,IT Infrastructure,US,Chicago,United States,Chicago HQ,priya.natarajan
+dana.kowalski,Dana,Kowalski,Finance Manager,Finance,US,Chicago,United States,Chicago HQ,
+grace.okafor,Grace,Okafor,Compliance Auditor,Risk and Compliance,US,Chicago,United States,Chicago HQ,
+jonas.becker,Jonas,Becker,Operations Manager,EU Operations,NL,Amsterdam,Netherlands,Amsterdam Hub,
+lotte.devries,Lotte,de Vries,Application Developer,EU Operations,NL,Amsterdam,Netherlands,Amsterdam Hub,jonas.becker
+elena.rossi,Elena,Rossi,Data Analyst,EU Operations,NL,Amsterdam,Netherlands,Amsterdam Hub,jonas.becker
+weiling.tan,Wei Ling,Tan,Operations Analyst,APAC Operations,SG,Singapore,Singapore,Singapore Hub,arjun.mehta
+arjun.mehta,Arjun,Mehta,Systems Engineer,APAC Operations,SG,Singapore,Singapore,Singapore Hub,

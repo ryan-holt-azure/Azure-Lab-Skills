@@ -1,0 +1,29 @@
+{
+  "rules": [
+    {
+      "enabled": true,
+      "name": "hlg-manifests-aging",
+      "type": "Lifecycle",
+      "definition": {
+        "filters": {
+          "blobTypes": [ "blockBlob" ],
+          "prefixMatch": [ "manifests/" ]
+        },
+        "actions": {
+          "baseBlob": {
+            "tierToCool":    { "daysAfterModificationGreaterThan": 30 },
+            "tierToCold":    { "daysAfterModificationGreaterThan": 90 },
+            "tierToArchive": { "daysAfterModificationGreaterThan": 180 },
+            "delete":        { "daysAfterModificationGreaterThan": 2555 }
+          },
+          "version": {
+            "delete": { "daysAfterCreationGreaterThan": 90 }
+          },
+          "snapshot": {
+            "delete": { "daysAfterCreationGreaterThan": 90 }
+          }
+        }
+      }
+    }
+  ]
+}
