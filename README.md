@@ -12,7 +12,7 @@ Halsted Logistics, while preparing for the AZ-104 (Azure Administrator) exam.
 
 | Lab | Topic | Status | My write-up |
 |---|---|---|---|
-| 00 | [Setup, Tooling and a Cost Safety Net](labs/00-setup-and-safety-net.md) | Not started | [notes](notes/lab-00.md) |
+| 00 | [Setup, Tooling and a Cost Safety Net](labs/00-setup-and-safety-net.md) | In progress (4/5 evidence) | [notes](notes/lab-00.md) |
 | 01 | [Halsted Staff Identities, Licensing, Guests, SSPR and Conditional Access](labs/01-identities-and-conditional-access.md) | Not started | [notes](notes/lab-01.md) |
 | 02 | [Governance: Management Groups, Policy, Tags, Locks and Costs](labs/02-governance-policy-locks-costs.md) | Not started | [notes](notes/lab-02.md) |
 | 03 | [Infrastructure as Code: Deploy the Hybrid Foundation with Bicep and ARM](labs/03-iac-bicep-arm-foundation.md) | Not started | [notes](notes/lab-03.md) |
