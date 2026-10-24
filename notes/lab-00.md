@@ -1,6 +1,6 @@
 # Lab 00: Setup, Tooling and a Cost Safety Net
 
-**Status:** Evidence 4 of 5 (00-01 pending) · **Date(s):** Oct 22–23, 2026 · **Time spent:** ~5 h · **Cost (Cost analysis):** $0.00
+**Status:** Complete · **Date(s):** Oct 22–23, 2026 · **Time spent:** ~5 h · **Cost (Cost analysis):** $0.00
 
 Lab guide: [labs/00-setup-and-safety-net.md](../labs/00-setup-and-safety-net.md) · Screenshots: `screenshots/lab-00/`
 
@@ -14,7 +14,7 @@ Lab guide: [labs/00-setup-and-safety-net.md](../labs/00-setup-and-safety-net.md)
 ## Evidence
 | Checkpoint | What it proves | Screenshot | Status |
 |---|---|---|---|
-| 00-01 | Subscription overview showing the offer type | `screenshots/lab-00/00-01-subscription-offer.png` | Pending |
+| 00-01 | Subscription overview showing the offer type | ![Checkpoint 00-01: Plan = Azure Plan (pay-as-you-go), lab admin is Owner](../screenshots/lab-00/00-01-subscription-offer.png) | Done |
 | 00-02 | Licenses → All products showing the P2 trial | ![Checkpoint 00-02: Entra ID P2 trial, 100 licenses](../screenshots/lab-00/00-02-entra-p2-trial.png) | Done |
 | 00-03 | Cloud Shell showing `az version` and `az bicep version` | ![Checkpoint 00-03: Azure CLI 2.91.0, Bicep installed, AzCopy 10.33](../screenshots/lab-00/00-03-cloud-shell-tools.png) | Done |
 | 00-04 | Preflight output | ![Checkpoint 00-04: preflight registering resource providers as the lab admin](../screenshots/lab-00/00-04-preflight.png) | Done |
@@ -63,4 +63,4 @@ df -h | grep clouddrive
 - __ / 5 first try. Misses:
 
 ## Questions to follow up
-- Re-run preflight until every provider and `EncryptionAtHost` show `Registered` (needed by Lab 08).
+- Second preflight run (Oct 23): every resource provider and `EncryptionAtHost` show `Registered`. Still to check: the Standard_B1s availability and vCPU quota section.
