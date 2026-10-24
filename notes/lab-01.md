@@ -1,6 +1,6 @@
 # Lab 01: Halsted Staff Identities, Licensing, Guests, SSPR and Conditional Access
 
-**Status:** Not started · **Date(s):** - · **Time spent:** - · **Cost (Cost analysis):** -
+**Status:** In progress (Tasks 1–3 done, paused at Task 4) · **Date(s):** Oct 23, 2026– · **Time spent:** - · **Cost (Cost analysis):** -
 
 Lab guide: [labs/01-identities-and-conditional-access.md](../labs/01-identities-and-conditional-access.md) · Screenshots: `screenshots/lab-01/`
 
@@ -14,9 +14,9 @@ Lab guide: [labs/01-identities-and-conditional-access.md](../labs/01-identities-
      and set Status to Done. Redact first: docs/screenshot-guide.md -->
 | Checkpoint | What it proves | Screenshot | Status |
 |---|---|---|---|
-| 01-01 | Marcus's profile showing job info, usage location and manager | `screenshots/lab-01/01-01-user-properties.png` | Pending |
-| 01-02 | Bulk operation results (Path A) or the script output (Path B) | `screenshots/lab-01/01-02-bulk-create.png` | Pending |
-| 01-03 | The Deleted users blade with Dana selected for restore | `screenshots/lab-01/01-03-restore-user.png` | Pending |
+| 01-01 | Marcus's profile showing job info, usage location and manager | ![Checkpoint 01-01: Marcus Reyes created as a cloud member account, enabled](../screenshots/lab-01/01-01-user-properties.png) | Partial: Overview tab only. Properties tab (job info, usage location, manager) still to capture |
+| 01-02 | Bulk operation results (Path A) or the script output (Path B) | ![Checkpoint 01-02a: CSV uploaded to Bulk create (Path A)](../screenshots/lab-01/01-02a-bulk-upload.png) ![Checkpoint 01-02: 6 users before, 14 after; all 8 HLG staff created](../screenshots/lab-01/01-02-bulk-create.png) | Done |
+| 01-03 | The Deleted users blade with Dana selected for restore | ![Checkpoint 01-03a: Dana Kowalski in Deleted users, 30-day purge date shown](../screenshots/lab-01/01-03a-deleted-users.png) ![Checkpoint 01-03: Dana selected for restore](../screenshots/lab-01/01-03-restore-user.png) | Done |
 | 01-04 | `grp-hlg-eu-ops` dynamic rule and its members | `screenshots/lab-01/01-04-dynamic-group.png` | Pending |
 | 01-05 | The group Licenses blade showing the usage-location error, then cleared | `screenshots/lab-01/01-05-license-error.png` | Pending |
 | 01-06 | The guest's profile showing User type: Guest and the #EXT# UPN | `screenshots/lab-01/01-06-guest-user.png` | Pending |
